@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/player_row_view" />
+
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <ViewSwitcher
+            android:id="@+id/vs_ended_game"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/et_returned_coins"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Returned coins"
+                android:text="\u20B9"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tv_returned_coins"/>
+        </ViewSwitcher>
+        <Button
+            android:id="@+id/btn_player_over"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="OK"
+            android:layout_weight="2"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_winning_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:text="Winning Amount"/>
+</LinearLayout>
